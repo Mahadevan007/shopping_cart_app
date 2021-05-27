@@ -52,6 +52,7 @@ import com.example.cart.pdfmailgenerator.SMSService;
 import com.example.cart.model.ChargeRequest.Currency;
 import com.example.cart.service.CartService;
 import com.example.cart.service.InvoiceService;
+import com.example.cart.service.ItemService;
 import com.example.cart.service.PaymentService;
 import com.example.cart.service.StorageService;
 import com.example.cart.service.StripeService;
@@ -88,6 +89,17 @@ public class InvoiceController {
 
 	public void setPaymentsService(StripeService paymentsService) {
 		this.paymentsService = paymentsService;
+	}
+	
+	@Autowired
+	private ItemService itemService;
+	
+	public ItemService getItemService() {
+		return itemService;
+	}
+
+	public void setItemService(ItemService itemService) {
+		this.itemService = itemService;
 	}
 
 	@Autowired
@@ -179,18 +191,21 @@ public class InvoiceController {
 		while (itr.hasNext()) {
 
 			Cart cart = itr.next();
+			
+			sum = sum + cart.getItem_totalamount();
 
 		for(int i=0;i<cart.getItem_quantity();i++) {
 			System.out.println(cart.toString());
 			System.out.println("inside loop");
 			System.out.println(cart.getItem_totalamount());
-			sum = sum + cart.getItem_totalamount();
 			System.out.println(cart.toString());
 			System.out.println(sum);
+			int newQuantity = cart.getItem_total_quantity() - cart.getItem_quantity();
 			Item item = new Item(cart.getItem_name(), cart.getItem_price(), cart.getImage_url(),
-					cart.getItem_quantity(), cart.getCategory());
+					newQuantity, cart.getCategory());
 			System.out.println(item.toString());
 			item.setId(cart.getItem_id());
+			itemService.updateItem(item);
 			System.out.println(item.toString());
 			products.add(item);
 			System.out.println(products.toString());

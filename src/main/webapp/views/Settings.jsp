@@ -26,7 +26,7 @@
 				<span class="toggle-button__bar"></span> <span
 					class="toggle-button__bar"></span> <span class="toggle-button__bar"></span>
 			</button>
-			<a href="index.html" class="main-header__brand"> <img
+			<a href="/dashboard" class="main-header__brand"> <img
 				src="/images/shopping-cart.jpeg" alt="ShopMart - Shopping Store">
 			</a>
 		</div>

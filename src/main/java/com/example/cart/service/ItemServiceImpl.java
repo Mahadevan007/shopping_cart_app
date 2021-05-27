@@ -48,5 +48,11 @@ public class ItemServiceImpl implements ItemService {
 		// TODO Auto-generated method stub
 		return itemDao.getItemById(itemId);
 	}
+	
+	@Override
+	public void updateItem(Item item) {
+		// TODO Auto-generated method stub
+		itemDao.updateItem(item);
+	}
 
 }

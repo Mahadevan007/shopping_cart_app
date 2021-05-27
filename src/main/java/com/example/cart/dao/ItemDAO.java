@@ -13,4 +13,6 @@ public interface ItemDAO {
 	public abstract List<Item> getAllItems();
 	
 	public abstract Item getItemById(int itemId);	
+	
+	public abstract void updateItem(Item item);
 }

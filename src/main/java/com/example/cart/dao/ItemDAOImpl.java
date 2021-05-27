@@ -67,5 +67,15 @@ public class ItemDAOImpl implements ItemDAO {
 		
 		return item;
 	}
+	
+	@Override
+	public void updateItem(Item item) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		
+		System.out.println(".................session factory.................:"+sessionFactory);
+		
+		session.update(item);
+	}
 
 }

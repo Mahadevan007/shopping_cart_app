@@ -68,7 +68,7 @@
 		<section id="CategoryA">
 			<div class='container'>
 				<c:forEach var="j" items="${itemsList}">
-					<c:if test="${j.category == 'A' }">
+					<c:if test="${j.category == 'A' && j.getQuantity() != '0' }">
 						<div class='product' id=${j.getId()}>
 							<div class="image_container">
 								<img src=${j.getImageurl() } width="100" height="100">
@@ -94,7 +94,7 @@
 		<section id="CategoryB">
 			<div class='container'>
 				<c:forEach var="j" items="${itemsList}">
-					<c:if test="${j.category == 'B' }">
+					<c:if test="${j.category == 'B' && j.getQuantity() != '0' }">
 						<div class='product' id=${j.getId()}>
 							<div class="image_container">
 								<img src=${j.getImageurl() } width="100" height="100">
@@ -120,7 +120,7 @@
 		<section id="CategoryC">
 			<div class='container'>
 				<c:forEach var="j" items="${itemsList}">
-					<c:if test="${j.category == 'C' }">
+					<c:if test="${j.category == 'C' && j.getQuantity() != '0'}">
 						<div class='product' id=${j.getId()}>
 							<div class="image_container">
 								<img src=${j.getImageurl() } width="100" height="100">

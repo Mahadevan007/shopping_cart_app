@@ -167,7 +167,11 @@ public class UserController {
 		
 		List<Item> itemsList = itemService.getAllItems();
 		
+		System.out.println("Items List = "+itemsList.toString());
+		
 		request.setAttribute("items",itemsList );
+		
+		request.getSession().setAttribute("itemsList",itemsList);
 		
 		return "dashboard";
 	}

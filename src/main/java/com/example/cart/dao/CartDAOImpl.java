@@ -84,7 +84,7 @@ public class CartDAOImpl implements CartDAO {
 
 		Criteria crit = session.createCriteria(Cart.class);
 
-		crit.add(Restrictions.eq("user_id", item.getId()));
+		crit.add(Restrictions.eq("user_id", userId));
 
 		List<Cart> results1 = crit.list();
 

@@ -9,7 +9,7 @@ import com.twilio.type.PhoneNumber;
 public class SMSService {
 	
 	private static final String ACCOUNT_SID = "AC9acacc69ddcbd2abb55be92a6acf4845";
-	private static final String AUTH_TOKEN = "70162b58ab38892dd30a2c9a34cffbf3";
+	private static final String AUTH_TOKEN = "";
 	
 	public boolean sendSMS(User user,Invoice invoice) {
 		// TODO Auto-generated method stub  

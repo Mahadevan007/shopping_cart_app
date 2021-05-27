@@ -1,0 +1,93 @@
+<%@page import="com.stripe.Stripe"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/shared.css">
+<link rel="stylesheet" href="/css/result.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+	integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Document</title>
+</head>
+<body>
+	<div class="backdrop"></div>
+	<div class="modal">
+		<h1 class="modal__title">Do you want to continue?</h1>
+		<div class="modal__actions">
+			<a href="/logout" class="modal__action modal__action--yes">Yes!</a>
+			<button class="modal__action modal__action--no" type="button">No!</button>
+		</div>
+	</div>
+	<header class="main-header">
+		<div>
+			<button class="toggle-button">
+				<span class="toggle-button__bar"></span> <span
+					class="toggle-button__bar"></span> <span class="toggle-button__bar"></span>
+			</button>
+			<a href="/dashboard" class="main-header__brand"> <img
+				src="/images/shopping-cart.jpeg" alt="ShopMart - Shopping Store">
+			</a>
+		</div>
+		<nav class="main-nav">
+			<ul class="main-nav__items">
+				<li class="main-nav__item"><a href="/settings">Update
+						Profile</a></li>
+				<li class="main-nav__item"><a href="/invoice/myorders">View My Orders</a></li>
+				<li class="main-nav__item"><a id="logout-button">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+	<nav class="mobile-nav">
+		<ul class="mobile-nav__items">
+			<li class="mobile-nav__item"><a href="/settings">Update
+					Profile</a></li>
+			<li class="mobile-nav__item"><a href="/invoice/myorders">View My Orders</a></li>
+			<li class="mobile-nav__item"><a id="logout-button2">Logout</a></li>
+		</ul>
+		<div class='cart icon-basket'>
+			<span class='number'>1</span>
+		</div>
+	</nav>
+	<main>
+		<div class="main-content">
+			<h3 th:if='${error}' th:text='${error}' style='color: red;'></h3>
+			<div th:unless='${error}'>
+				<h1>Success</h1>
+				<h4>Your Order has been confirmed. Please check your email for
+					further details</h4>
+			</div>
+			<a href='/dashboard' class="back-to-dashboard">Back To Dashboard</a>
+		</div>
+	</main>
+	<script type="text/javascript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/shared.js"></script>
+	<script type="text/javascript">
+		function setValue() {
+			let value = document.getElementById("category").value;
+			console.log(value);
+			if (value == "A") {
+				document.getElementById("CategoryB").style.display = "none";
+				document.getElementById("CategoryC").style.display = "none";
+				document.getElementById("CategoryA").style.display = "block";
+			} else if (value == "B") {
+				document.getElementById("CategoryB").style.display = "block";
+				document.getElementById("CategoryC").style.display = "none";
+				document.getElementById("CategoryA").style.display = "none";
+			} else if (value == "C") {
+				document.getElementById("CategoryB").style.display = "none";
+				document.getElementById("CategoryC").style.display = "block";
+				document.getElementById("CategoryA").style.display = "none";
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

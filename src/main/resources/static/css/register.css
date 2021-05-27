@@ -1,0 +1,181 @@
+ textarea {
+	resize:none;
+}
+
+/* #form {
+	margin-top:8rem;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #183a1d;
+}
+
+.register-content {
+	text-align:center;
+}
+
+.register-form {
+    padding: 1rem;
+}
+
+.register-form label {
+    font-weight: bold;
+}
+
+.register-form label,
+.register-form input,
+.register-form select {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.register-form input[type="checkbox"]
+.register-form input[id*="terms"],
+.register-form input[id*="terms"] + label {
+    display: inline-block;
+    width: auto;
+    vertical-align: bottom;
+}
+
+.register-form input:not([type="checkbox"]),
+.register-form select {
+    border: 1px solid #ccc;
+    padding: 0.2rem 0.5rem;
+    font: inherit;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    outline: none;
+    background: #d8f3df;
+    border-color: #2ddf5c;
+}
+
+.register-form input[type="checkbox"] {
+    border: 1px solid #ccc;
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.register-form input[type="checkbox"]:checked {
+    background: #2ddf5c;
+    border: #0e4f1f;
+}
+
+.register-form input.invalid,
+.register-form select.invalid,
+.register-form :invalid {
+    border-color: red !important;
+    background: #faacac;
+}
+
+.register-form button[type="submit"] {
+    display: block;
+    margin-top: 1rem;
+}
+
+.register-form button {
+	width:50%;
+	height:2rem;
+}
+
+textarea {
+	margin-top:1rem;
+}
+
+@media (min-width: 40rem) {
+    .register-form {
+        margin: auto;
+        width: 25rem;
+    }
+} */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background: #344a72;
+	color: #fff;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+}
+
+#container {
+	margin: 30px auto;
+	max-width: 400px;
+	padding: 20px;
+}
+
+.form-wrap {
+	background: #fff;
+	padding: 15px 25px;
+	color: #333;
+}
+
+.form-wrap h1, .form-wrap p {
+	text-align: center;
+}
+
+.form-wrap .form-group {
+	margin-top: 15px;
+}
+
+.form-wrap .form-group label {
+	display: block;
+	color: #666;
+}
+
+.form-wrap .form-group input {
+	width: 100%;
+	padding: 10px;
+	border: #ddd 1px solid;
+	border-radius: 5px;
+}
+
+.form-wrap .form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: #ddd 1px solid;
+	border-radius: 5px;
+}
+
+.form-wrap button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 20px;
+	background: #49c1a2;
+	color: #fff;
+	cursor: pointer;
+}
+
+.form-wrap button:hover {
+	background: #37a08e;
+}
+
+.form-wrap .bottom-text {
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+}
+
+footer a {
+	color: #49c1a2;
+}

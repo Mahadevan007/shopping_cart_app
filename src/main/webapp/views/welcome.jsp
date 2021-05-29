@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/shared.css">
     <link rel="stylesheet" href="/css/welcome.css">
-    <title>Document</title>
+    <title>Shopping Cart</title>
 </head>
 <body>
 	<div class="content">

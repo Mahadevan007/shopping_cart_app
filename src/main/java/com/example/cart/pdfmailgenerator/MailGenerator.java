@@ -28,7 +28,7 @@ public class MailGenerator {
 		User userDTO = userCust;
 		String to=userDTO.getEmail();//change accordingly  
 		  final String user="shoppingcart367@gmail.com";//change accordingly  
-		  final String password="";//change accordingly  
+		  final String password="shoppingcart@1";//change accordingly  
 		   
 		  //1) get the session object     
 		  Properties properties = System.getProperties();  
